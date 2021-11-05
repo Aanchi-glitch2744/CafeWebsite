@@ -1,0 +1,383 @@
+ .contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+} .container {
+    width: 100%;
+    margin-top: 250px;
+    overflow: hidden;
+    background-image: url('../../../assets/images/bg-textura.png') repeat;
+}
+
+/* section div */
+div {
+    background: url('../../../assets/images/bg-textura.png') repeat;
+}
+
+div .acerca-de .contenedor {
+    overflow: visible;
+    position: relative;
+}
+
+div .acerca-de .foto {
+    width: 80%;
+    position: absolute;
+    left: 0;
+    top: -50px;
+    z-index: 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .35);
+}
+
+div .acerca-de .foto img {
+    vertical-align: top;
+    width: 100%;
+}
+
+div .acerca-de article {
+    background: #fff;
+    padding: 40px;
+    width: 50%;
+    position: relative;
+    top: 500px;
+    z-index: 1;
+    float: right;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .35);
+}
+
+div .acerca-de article h3 {
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+div .acerca-de article p {
+    line-height: 28px;
+    margin-bottom: 15px;
+}
+
+/* ------- -------- MENU --------- ------ */
+div .menu {
+    padding-top: 585px;
+    margin-bottom: 50px;
+}
+
+div .menu .titulo {
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+div .menu .contenedor-menu,
+div .menu .contenedor-menu2 {
+    border: 1px solid #000;
+    background: transparent;
+    padding: 10px;
+    overflow: hidden;
+}
+
+div .menu article {
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+
+div .menu .categoria {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+div .menu .platillo {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 4px dotted #000;
+    overflow: hidden;
+}
+
+div .menu .nombre {
+    font-size: 20px;
+    margin-bottom: 15px;
+    float: left;
+}
+
+div .menu .precio {
+    font-size: 20px;
+    margin-bottom: 15px;
+    float: right;
+}
+
+div .menu .descripcion {
+    font-size: 16px;
+    color: #676767;
+    clear: both;
+}
+
+/* ------- -------- GALERÍA --------- ------ */
+div .galeria {
+    overflow: hidden;
+}
+
+div .galeria .foto {
+    width: 25%;
+    float: left;
+}
+
+div .galeria .foto img {
+    width: 100%;
+    vertical-align: top;
+    opacity: .7;
+}
+
+div .galeria .foto:hover img {
+    opacity: 1;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+div .ubicacion {
+    background: #fff;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+div .ubicacion .titulo {
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+div .ubicacion .direccion {
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+
+div .ubicacion .horarios {
+    float: right;
+    width: 50%;
+    text-align: right;
+    overflow: hidden;
+}
+
+div .ubicacion .direccion .calle {
+    margin-bottom: 15px;
+}
+
+div .ubicacion .horarios h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+div .ubicacion .horarios .entre-semana,
+div .ubicacion .horarios .fin-semana {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+
+/* ------- -------- MEDIA QUERYS --------- ------ */
+
+@media screen and (max-width: 800px) {
+    header .contenedor {
+        position: static;
+        height: auto;
+    }
+
+    header .textos {
+        position: static;
+        margin: 100px 0;
+    }
+
+    header .nav-menu {
+        text-align: center;
+    }
+
+    header .nav-menu a {
+        margin: 10px 20px;
+        font-size: 18px;
+    }
+
+    header .textos .nombre {
+        font-size: 40px;
+    }
+
+    header .textos h3 {
+        font-size: 20px;
+    }
+
+    div .acerca-de .foto {
+        width: 100%;
+        position: relative;
+    }
+
+    div .acerca-de article {
+        position: relative;
+        width: 100%;
+        top: -50px;
+        transform: translate(0px, 0);
+        -webkit-transform: translate(0px, 0);
+        -moz-transform: translate(0px, 0);
+        -ms-transform: translate(0px, 0);
+        -o-transform: translate(0px, 0);
+    }
+
+    div .menu {
+        padding-top: 300px;
+    }
+
+    div .menu article {
+        width: 100%;
+    }
+
+    div .galeria .foto {
+        width: 50%;
+    }
+
+    div .galeria .foto img {
+        opacity: 1;
+    }
+
+    div .mapa {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    header .nav-menu a {
+        font-size: 16px;
+        margin: 10px 10px;
+    }
+    
+    div .acerca-de article h3 {
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+
+    div .menu article .nombre,
+    div .menu article .precio {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    div .ubicacion .titulo {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+
+    div .ubicacion .horarios h4 {
+        margin-bottom: 10px;
+    }
+
+    div .ubicacion .direccion {
+        margin-bottom: 25px;
+    }
+
+    div .ubicacion .direccion,
+    div .ubicacion .horarios {
+        width: 100%;
+        text-align: center;
+    }
+
+    div .ubicacion .horarios .entre-semana {
+        margin-bottom: 15px;
+    }
+
+    div .ubicacion .horarios .entre-semana,
+    div .ubicacion .horarios .fin-semana {
+        width: 100%;
+    }
+
+}
+
+
+header.hero{
+    height:600px;
+    background-image:url(../../../assets/images/cafe51.jpg);
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    overflow:hidden;
+}
+header.hero .container{
+    position: relative;
+}
+header.hero .welcome{
+    margin-bottom:0.25rem;
+}
+header.hero .welcome span{
+    font-family:"Raleway-bold";
+    color:var(--secondary);
+    margin-right:0.75rem;
+
+}
+header.hero h1{
+    font-family:"Raleway-extrabold";
+    color:var(--secondary);
+    font-size: 2.5rem;
+    margin-bottom:0.75rem;
+}
+header.hero h1 span{
+    color:var(--primary);
+}
+header.hero p{
+    font-family: "Raleway-medium";
+    width:50%;
+    line-height:1.5;
+    margin-bottom:1rem;
+}
+.btn{
+    padding:0.75rem 0.75rem;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+    line-height:0.8;
+    font-size:1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    border:1px solid transparent;
+}
+
+.btn-primary {
+    background:var(--primary);
+    color:var(--heaven);
+}
+.btn-primary:hover{
+    background:var(--heaven);
+    color:var(--primary); 
+    border:1px solid var(--primary);
+}
+.btn-secondary{
+    background:var(--secondary);
+    color:var(--heaven); 
+}
+.btn-secondary:hover{
+    background:var(--heaven);
+    color:var(--secondary); 
+    border:1px solid var(--secondary);
+}
+
+header.hero button:first-child{
+    margin-right:0.50rem;
+}
+
+header.hero .hero-image{
+    position:absolute;
+    top:-40px;
+    right:40px;
+}
+
