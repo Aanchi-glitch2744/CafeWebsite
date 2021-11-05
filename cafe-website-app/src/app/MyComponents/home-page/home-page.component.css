@@ -1,13 +1,48 @@
- .contenedor {
+body{
+    background-image: url('../../../assets/images/bg-textura.png') repeat;
+}
+
+.contenedor {
     width: 90%;
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
-} .container {
+    padding-left:25px;
+} 
+
+.container {
     width: 100%;
     margin-top: 250px;
     overflow: hidden;
+    margin-right: auto;
+    /* background-image: url('../../../assets/images/bg-textura.png') repeat;
+    border: 10px sloid brown; */
+}
+
+.intro-contents{
     background-image: url('../../../assets/images/bg-textura.png') repeat;
+    border: 10px sloid brown;
+
+}
+
+.fav{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.fav h4{
+    text-align: center;
+}
+
+.services{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.services h4{
+    text-align: center;
 }
 
 /* section div */
@@ -58,8 +93,8 @@ div .acerca-de article p {
 
 /* ------- -------- MENU --------- ------ */
 div .menu {
-    padding-top: 585px;
-    margin-bottom: 50px;
+    padding-top: 10px;
+    margin-bottom: 10px;
 }
 
 div .menu .titulo {
@@ -141,7 +176,7 @@ div .galeria .foto:hover img {
 }
 
 div .ubicacion {
-    background: #fff;
+    background: rgb(71, 23, 23);
     padding: 60px 0;
     overflow: hidden;
 }
@@ -152,6 +187,11 @@ div .ubicacion .titulo {
     line-height: 40px;
     font-weight: 300;
     margin-bottom: 40px;
+}
+
+.titulo{
+    padding-top: 10px;;
+    text-align: center;
 }
 
 div .ubicacion .direccion {
@@ -301,7 +341,7 @@ div .ubicacion .horarios .fin-semana {
 
 
 header.hero{
-    height:600px;
+    height:610px;
     background-image:url(../../../assets/images/cafe51.jpg);
     background-position: 0% 0%;
     background-repeat: no-repeat;
