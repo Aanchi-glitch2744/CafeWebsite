@@ -1,0 +1,72 @@
+<body>
+<div class="col-md-6 col-md-offset-3" id="border1">
+    <h2>Login/ Register</h2>
+    <h6>Please fill the form to continue</h6>
+    <form name="form" ng-submit="vm.login()" role="form" id="border2">
+        <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="form-control" ng-model="vm.username" required />
+            <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+        </div><br>
+        <div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" ng-model="vm.password" required />
+            <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+        </div><br>
+        
+        <div class="form-group">
+            <label for="phone">Enter your phone number:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="1234-456-6789"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required > <br>
+        </div>
+        <div class="form-group">
+            <label for="email"> Enter your email id:</label><br>
+            <input type="email" id="email" name="email" placeholder="eg. abc@gmail.com"> 
+            </div><br>
+
+        <div class="form-group">
+        <input type="checkbox" id="remember" name="remember">
+        <label for="remember"> Remember Me</label><br>
+        </div>
+        <div class="form-actions">
+            <button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Login</button>
+            <a href="#!/register" class="btn btn-link">Register</a>
+        </div>
+    </form>
+</div>
+<script>
+    (function () {
+    'use strict';
+
+    angular
+        .module('app')
+        .controller('LoginController', LoginController);
+
+    LoginController.$inject = ['$location', 'AuthenticationService', 'FlashService'];
+    function LoginController($location, AuthenticationService, FlashService) {
+        var vm = this;
+
+        vm.login = login;
+
+        (function initController() {
+            // reset login status
+            AuthenticationService.ClearCredentials();
+        })();
+
+        function login() {
+            vm.dataLoading = true;
+            AuthenticationService.Login(vm.username, vm.password, function (response) {
+                if (response.success) {
+                    AuthenticationService.SetCredentials(vm.username, vm.password);
+                    $location.path('/');
+                } else {
+                    FlashService.Error(response.message);
+                    vm.dataLoading = false;
+                }
+            });
+        };
+    }
+
+})();
+</script>
+</body>
