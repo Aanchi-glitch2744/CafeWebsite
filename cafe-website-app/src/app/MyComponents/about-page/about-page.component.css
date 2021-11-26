@@ -1,0 +1,120 @@
+ .about{
+    background-image: url('../../../assets/images/bg-textura.png');
+    width: 100%;
+}
+
+
+.top-line{
+    background-color: rgba(0, 137, 228, 0.3);
+    text-align: center;
+}
+
+.top-line h2{
+    color: brown;
+}
+
+.top-line p{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.para-det{
+    text-align: center;
+    margin-top: 40px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+
+div .contact-at {
+    background: rgba(0, 137, 228, 0.3);
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+div .contact-at .title {
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.title{
+    padding-top: 10px;;
+    text-align: center;
+}
+
+div .contact-at .direction {
+    float: left;
+    width: 50%;
+    text-align: left;
+    margin: auto;
+}
+
+div .contact-at .hours {
+    float: right;
+    width: 50%;
+    text-align: right;
+    overflow: hidden;
+}
+
+div .contact-at .direction .call {
+    margin-bottom: 15px;
+}
+
+div .contact-at .hours h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+div .contact-at .hours .normal,
+div .contact-at .hourss .weekends {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.cont {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding-left:25px;
+} 
+
+/* ------- -------- MEDIA QUERYS --------- ------ */
+
+
+
+@media screen and (max-width: 415px) {
+   
+    div .contact-at .title {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+
+    div .contact-at .hours h4 {
+        margin-bottom: 10px;
+    }
+
+    div .contact-at .direction {
+        margin-bottom: 25px;
+    }
+
+    div .contact-at .direction,
+    div .contact-at .hours {
+        width: 100%;
+        text-align: center;
+    }
+
+    div .contact-at .hours .normal{
+        margin-bottom: 15px;
+    }
+
+    div .contact-at .hours .normal,
+    div .contact-at .hours .weekends {
+        width: 100%;
+    }
+
+}

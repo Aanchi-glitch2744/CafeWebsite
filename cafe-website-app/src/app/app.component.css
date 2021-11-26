@@ -1,27 +1,12 @@
-/* .navbar-custom {
-    background-color: #4433cc;
-} */
 
-/* change the background color */
 .navbar-custom {
     background-color: #240e00;
 }
 
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.coffee{
+    text-align: center;
+    margin:auto
 }
 
-body {
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    font-size: 16px;
-} */
 
-/* .contenedor {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-} */
 
